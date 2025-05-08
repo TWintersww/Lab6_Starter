@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", init);
 function init() {
 	// Get the recipes from localStorage
 	let recipes = getRecipesFromStorage();
-  console.log('recipes:', recipes)
+  //console.log('recipes:', recipes)
 	// Add each recipe to the <main> element
 	addRecipesToDocument(recipes);
 	// Add the event listeners to the form elements
@@ -42,10 +42,12 @@ function addRecipesToDocument(recipes) {
 	//            create a <recipe-card> element for each one, and populate
 	//            each <recipe-card> with that recipe data using element.data = ...
 	//            Append each element to <main>
-  for (let recipe of recipes) {
-    let recipeCard = document.createElement("recipe-card");
-    recipeCard.data = recipe;
-    main.appendChild(recipeCard);
+  if (recipes != null) {
+    for (let recipe of recipes) {
+      let recipeCard = document.createElement("recipe-card");
+      recipeCard.data = recipe;
+      main.appendChild(recipeCard);
+    }
   }
 }
 
