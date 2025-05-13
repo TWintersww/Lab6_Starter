@@ -2,4 +2,4 @@
 
 Evan Wu
 
-GH Pages Link: 
+GH Pages Link: https://twintersww.github.io/Lab6_Starter/
